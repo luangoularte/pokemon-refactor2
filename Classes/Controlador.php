@@ -41,7 +41,6 @@ class Controlador {
         $retorno = array_slice($todos, ($page - 1) * $resultsPerPage, $resultsPerPage);
     
         echo json_encode([
-            'message' => $message,
             'page' => $page,
             'data' => $retorno
         ]);
@@ -49,9 +48,10 @@ class Controlador {
     }
 
 
-    public function statsPokemon($searched) {
+    public function statsPokemon($route) {
+        $searched = explode('/', substr($route, 1))[1];
         if (!file_exists("$searched.txt")) {
-            
+               
             $message = 'Fetched from API.';
             
             $curl = new RequisicaoAPIcurl;
