@@ -1,6 +1,6 @@
 <?php 
 
-class RequisicaoAPI {
+class Requisicao {
     
     public function verificacao() {
 
