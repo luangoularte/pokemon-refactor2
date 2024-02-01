@@ -7,7 +7,7 @@ require_once "Classes/RequisicaoAPIcurl.php";
 
 
 
-$requisicao = (new RequisicaoAPI)->verificacao();
+$requisicao = (new Requisicao)->verificacao();
 
 $roteador = (new Roteador)->router($requisicao);
 

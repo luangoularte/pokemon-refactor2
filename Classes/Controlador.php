@@ -41,7 +41,6 @@ class Controlador {
         $retorno = array_slice($todos, ($page - 1) * $resultsPerPage, $resultsPerPage);
     
         echo json_encode([
-            'message' => $message,
             'page' => $page,
             'data' => $retorno
         ]);
